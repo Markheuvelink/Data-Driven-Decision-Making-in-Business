@@ -21,16 +21,17 @@ x = symbols('x')
 x = np.linspace(0, 100, 1000)
 
 # Define the estimated exponential function
-y1 = ____                                              # Fill in
+y1 = -20+((20*(1+0.03)**x)-20)
+y2 = 60                                              # Fill in
 
 # Plot the function
-plt.plot(x, y1)
-plt.hlines(60, 0, 40)                                  # Plot a horizontal line at y=60 (the total investment after ? months)
+plt.plot(x, y1,y2)
+plt.hlines(60, 0, 100)                                  # Plot a horizontal line at y=60 (the total investment after ? months)
 plt.title('Exponential function with e')
 plt.xlabel("x (r*t)")
 plt.ylabel("y")
-plt.xlim([0,40])
-plt.ylim([0,80])
+plt.xlim([0,60])
+plt.ylim([-20,80])
 plt.legend(loc='lower right')
 plt.grid(True)
 plt.show()
